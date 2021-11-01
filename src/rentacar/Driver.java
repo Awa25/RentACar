@@ -19,7 +19,7 @@ import java.io.IOException;
 // GitHub Link:https://github.com/Awa555/RentACar
 
 
-// INCLUDE HERE THE FULL NAME AND STUDENT NUMBER OF BOTH TEAM MEMBERS 
+// RUEI LI JHANG 2020443 
 // AS A COMMENT!!!!
 
 
