@@ -18,7 +18,9 @@ public class Car implements CarInterface {
     private int id;
     private double rate;
     private Make make;
-
+    private Map<Month, Boolean[]> map;
+    
+    
     @Override
     public Map<Month, boolean[]> createAvailability() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
