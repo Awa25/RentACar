@@ -64,16 +64,46 @@ public class RentACar implements RentACarInterface {
             if(car.getMake().equals(make)){            
                 flag = 0;
                 currentDay = day;
+                
+                for(int i = 0; i < lengthOfRent; i++){
+                    if(!car.isAvailable(month, currentDay++)){
+                        flag = 1;
+                        break;
+                    }
+                }
+                
+                if(flag == 0){
+                    return true;
+                }
             }
         }
-        
+        return false;
     }
 
     
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
 
-        int currentDay;
+        int currentDay, flag;
+        
+        for(Car car:cars){
+            if(car.getMake().equals(make)){
+                flag = 0;
+                currentDay = day;
+                
+                for(int i = 0; i <lengthOfRent; i++){
+                    if(!car.isAvailable(month, currentDay)){
+                        flag = 1;
+                        break;
+                    }
+                }
+                
+                if(flag == 0){
+                    return car.getId();
+                }
+            }
+        }
+        return -1;
     }
 
     
