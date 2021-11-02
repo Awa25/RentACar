@@ -56,22 +56,38 @@ public class RentACar implements RentACarInterface {
     
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        int currentDay, flag;
+        
+        for(Car car: cars){
+            
+            if(car.getMake().equals(make)){            
+                flag = 0;
+                currentDay = day;
+            }
+        }
+        
     }
 
+    
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        int currentDay;
     }
 
+    
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        int carId = getCarAvailable(month, day, make, lengthOfRent);
     }
 
+    
     @Override
     public int getNumberOfCars() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return cars.size();
     }
     
 }
