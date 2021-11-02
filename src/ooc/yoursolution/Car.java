@@ -14,6 +14,10 @@ import ooc.enums.Month;
  * @author rueilijhang
  */
 public class Car implements CarInterface {
+    
+    private int id;
+    private double rate;
+    private Make make;
 
     @Override
     public Map<Month, boolean[]> createAvailability() {
@@ -22,7 +26,7 @@ public class Car implements CarInterface {
 
     @Override
     public Make getMake() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return make;
     }
 
     @Override
