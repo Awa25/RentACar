@@ -16,7 +16,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-// GitHub Link:https://github.com/Awa555/RentACar
+// GitHub Link
+// https://github.com/Awa555/RentACar
 
 
 // Chia Hua Lin 2020044
