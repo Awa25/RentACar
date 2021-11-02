@@ -20,6 +20,12 @@ public class Car implements CarInterface {
     private Make make;
     private Map<Month, Boolean[]> map;
     
+    public Car(int id, Make make, double rate){
+      this.id=id;
+      this.make = make;
+      this.rate = rate;
+      craeteAvailability();
+    }
     
     @Override
     public Map<Month, boolean[]> createAvailability() {
@@ -68,6 +74,10 @@ public class Car implements CarInterface {
 
     @Override
     public boolean book(Month month, int day) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void craeteAvailability() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
