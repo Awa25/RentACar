@@ -109,6 +109,10 @@ public class RentACar implements RentACarInterface {
     
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
+        
+        if(!checkAvailability(month,day,make,lengthOfRent)){
+            return false;
+        }
 
         int carId = getCarAvailable(month, day, make, lengthOfRent);
     }
