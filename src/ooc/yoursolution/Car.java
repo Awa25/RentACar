@@ -25,7 +25,7 @@ public class Car implements CarInterface {
       this.id=id;
       this.make = make;
       this.rate = rate;
-      craeteAvailability();
+//      craeteAvailability();
     }
     
     @Override
@@ -85,16 +85,25 @@ public class Car implements CarInterface {
 
     @Override
     public boolean isAvailable(Month month, int day) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      Boolean[] availability = map.get(month);
+      if(availability[day-1] == null){
+         availability[day-1] = true;
+    }
+      return availability[day-1];
     }
 
     @Override
     public boolean book(Month month, int day) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      if (map.get(month)[day-1]){
+          map.get(month)[day-1] = false;
+          return true;
+    }
+    
+      return false;
     }
 
-    private void craeteAvailability() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    private void craeteAvailability() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
     
 }
