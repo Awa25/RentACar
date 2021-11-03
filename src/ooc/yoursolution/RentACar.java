@@ -116,13 +116,17 @@ public class RentACar implements RentACarInterface {
 
         int carId = getCarAvailable(month, day, make, lengthOfRent);
         
-        for(Car car:cars){
+        for(Car car : cars){
           if(car.getId() == carId && car.getMake() == make){
             int currentDay = day;
             for(int i=0; i<lengthOfRent; i++){
+              car.book(month, currentDay++);
+            }
           }
             
         }
+        
+        return true;
     }
 
     
