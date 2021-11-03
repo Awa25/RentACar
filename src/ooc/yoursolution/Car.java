@@ -25,7 +25,7 @@ public class Car implements CarInterface {
       this.id=id;
       this.make = make;
       this.rate = rate;
-//      craeteAvailability();
+      craeteAvailability();
     }
     
     @Override
@@ -102,8 +102,8 @@ public class Car implements CarInterface {
       return false;
     }
 
-//    private void craeteAvailability() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+    private void craeteAvailability() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
